@@ -1,5 +1,6 @@
 package Control;
 import java.io.IOException;
+import java.sql.SQLException;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.fluent.Form;
@@ -8,8 +9,9 @@ import org.apache.http.client.fluent.Request;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-import DB.User;
+import DB.UserDAO;
 import Model.Constants;
+import Model.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -23,11 +25,15 @@ import org.apache.http.client.ClientProtocolException;
 public class LoginByGoogle extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+			throws ServletException, IOException, ClassNotFoundException, SQLException {
 		String code = request.getParameter("code");
 		String accessToken = getToken(code);
 		User user = getUserInfo(accessToken);
-		System.out.println(user.toString());
+		Feature f =  new Feature();
+		user.setUser_id(f.getInt());
+		UserDAO userDAO = new UserDAO();
+        userDAO.insertNew(user);
+
 	}
 
 	public static String getToken(String code) throws ClientProtocolException, IOException {
@@ -55,6 +61,11 @@ public class LoginByGoogle extends HttpServlet {
     @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		processRequest(request, response);
+		try {
+			processRequest(request, response);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

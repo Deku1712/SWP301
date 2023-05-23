@@ -11,14 +11,15 @@ sign_in_btn.addEventListener("click", () => {
 });
 
 
-function validateUserName() {
-var inputValue = document.getElementById("input").value;
-var regexPattern = /^[A-Za-z][A-Za-z0-9_]{7,29}$/;
+// function validateUserName() {
+// // var inputValue = document.getElementById("input").value;
+// // var regexPattern = /^[A-Za-z][A-Za-z0-9_]{7,29}$/;
 
-if(regexPattern.test(inputValue)) { return true; }
+// // if(regexPattern.test(inputValue)) { return true; }
 
-else { 
-  alert("Enter a Valid UserName");
-  return false;
-  }
-}
+// // else { 
+// //   alert("Enter a Valid UserName");
+// //   return false;
+// //   }
+// return true;
+// }

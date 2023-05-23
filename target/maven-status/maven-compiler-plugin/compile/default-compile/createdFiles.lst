@@ -1,3 +1,7 @@
-LoginByGoogle.class
-Constants.class
-User.class
+Model\Constants.class
+Model\User.class
+DB\DBconnect.class
+Control\Feature.class
+Control\LoginByGoogle.class
+Control\SignUp.class
+DB\UserDAO.class

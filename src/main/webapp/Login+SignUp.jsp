@@ -1,88 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in || Sign up from</title>
-     <!-- font awesome icons -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- css stylesheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/styleLogin.css" />
+    <title>Login</title>
+    <link rel="icon" href="imgs/logoHipsterStore.png">
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <!-- <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" />
+            </div> -->
 
-    <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://accounts.google.com/o/oauth2/auth?scope=email%20profile&redirect_uri=http://localhost:8080/swp301/GoogleLogin&response_type=code
-                    &client_id=409937989406-54a75mp56int83lqtd4r0g3njb10j726.apps.googleusercontent.com&approval_prompt=force" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <div class="infield">
-                    <input type="text" placeholder="Name" />
-                    <label></label>
-                </div>
-                <div class="infield">
-                    <input type="email" placeholder="Email" name="email"/>
-                    <label></label>
-                </div>
-                <div class="infield">
-                    <input type="password" placeholder="Password" />
-                    <label></label>
-                </div>
-                <button>Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Sign in</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://accounts.google.com/o/oauth2/auth?scope=email%20profile&redirect_uri=http://localhost:8080/swp301/GoogleLogin&response_type=code
-                    &client_id=409937989406-54a75mp56int83lqtd4r0g3njb10j726.apps.googleusercontent.com&approval_prompt=force" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
-                <div class="infield">
-                    <input type="email" placeholder="Email" name="email"/>
-                    <label></label>
-                </div>
-                <div class="infield">
-                    <input type="password" placeholder="Password" />
-                    <label></label>
-                </div>
-                <div class="infield remember">
-                    <input type="checkbox" id="myCheckbox">
-                    <p>Remember me</p>
-                </div>
-                <a href="#" class="forgot">Forgot your password?</a>
-                <button>Sign In</button>
-            </form>
-        </div>
-        <div class="overlay-container" id="overlayCon">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button>Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button>Sign Up</button>
-                </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" name="name" id="input" autocomplete="off" placeholder="Username" /><br><br>
             </div>
-            <button id="overlayBtn"></button>
-        </div>
-    </div>
-    
-    <!-- js code -->
-    <script src="scripts.js"></script>
 
-</body>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+
+            <button type="submit"  class="btn solid">Login</button>
+            <!-- <input type="submit" value="Login" class="btn solid"/> -->
+            
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://accounts.google.com/o/oauth2/auth?scope=email%20profile&redirect_uri=http://localhost:8080/swp301/GoogleLogin&response_type=code
+              &client_id=409937989406-54a75mp56int83lqtd4r0g3njb10j726.apps.googleusercontent.com&approval_prompt=force" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" name="name" id="input" autocomplete="off" placeholder="Username" /><br><br>
+            </div>
+
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <!-- <input type="submit" class="btn" value="Sign up" /> -->
+            <button type="submit"  class="btn solid">Sign up</button>
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://accounts.google.com/o/oauth2/auth?scope=email%20profile&redirect_uri=http://localhost:8080/swp301/GoogleLogin&response_type=code
+              &client_id=409937989406-54a75mp56int83lqtd4r0g3njb10j726.apps.googleusercontent.com&approval_prompt=force" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+                To give real service you must add something which cannot be bought or measured with money, and that is sincerity and integrity.
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="imgs/9.png" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+             To give real service you must add something which cannot be bought or measured with money, and that is sincerity and integrity.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="imgs/9.png" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="js/login-script.js"></script> -->
+  </body>
 </html>
